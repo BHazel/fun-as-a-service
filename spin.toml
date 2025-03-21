@@ -1,0 +1,7 @@
+spin_manifest_version = 2
+
+[application]
+name = "fun-aas"
+version = "0.0.1"
+description = "Fun as a Service!"
+

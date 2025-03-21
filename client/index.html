@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Fun as a Service!</title>
+    </head>
+    <body>
+        <h1>Fun as a Service!</h1>
+        <p>Try out the fun services while immersed in a nostalgic Web 1.0 experience!</p>
+        <div class="warning">
+            <p><strong>Please note you will need to temporarily disable cross-origin restrictions in your browser for this page to work correctly.  This page is intended for development purposes only!</strong></p>
+        </div>
+        <div class="container">
+            <div class="controls">
+                <h2>Fun Services</h2>
+                <select id="service" onchange="updateService()">
+                    <option value="none">Select a Service</option>
+                    <option value="hello">Hello, World!</option>
+                    <option value="btl">Bottles!</option>
+                    <option value="fz">Fizz Fuzz Bop</option>
+                    <option value="pt">Potatoes!</option>
+                </select>
+                <div id="services">
+                    <div id="hello">
+                        <h3>Hello, World!</h3>
+                        <h4>The universal programmer's greeting!</h4>
+                        <button onclick="runHello()">Greet!</button>
+                    </div>
+                    <div id="btl">
+                        <h3>Bottles!</h3>
+                        <h4>Print the lyrics to <em>Ten Green Bottles</em>, with a specified number and colour!</h4>
+                        <p>
+                            <input id="bottleCount"  type="number" placeholder="Number of Bottles" /><br />
+                            <em>Default is 10.</em>
+                        </p>
+                        <p>
+                            <input id="bottleColour" type="text" placeholder="Bottle Colour" /><br />
+                            <em>Default is green.</em>
+                        </p>
+                        <button onclick="runBottles()">Get Lyrics!</button>
+                    </div>
+                    <div id="fz">
+                        <h3>Fizz Fuzz Bop</h3>
+                        <h4>An expanded version of FizzBuzz, as taught to me by a friend!</h4>
+                        <p>
+                            <input id="fizzFuzzBopCount" type="number" placeholder="Number to Count To" /><br />
+                            <em>Default is 60.</em>
+                        </p>
+                        <p>
+                            <input id="fizz" type="number" placeholder="Fizz" /><br />
+                            <em>Default is 3.</em>
+                        </p>
+                        <p>
+                            <input id="fuzz" type="number" placeholder="Fuzz" /><br />
+                            <em>Default is 4.</em>
+                        </p>
+                        <p>
+                            <input id="bop" type="number" placeholder="Bop" /><br />
+                            <em>Default is 5.</em>
+                        </p>
+                        <p>
+                            <input id="isGameplay" type="checkbox" />
+                            <label for="isGameplay">Gameplay Mode</label><br />
+                        </p>
+                        <button onclick="runFizzFuzzBop()">Play!</button>
+                    </div>
+                    <div id="pt">
+                        <h3>Potatoes!</h3>
+                        <h4>Get the lyrics to <em>One Potato, Two Potato</em> with a specified number of potatoes or something else!</h4>
+                        <p>
+                            <input id="potatoCount" type="number" placeholder="Number of Potatoes, or..." /><br />
+                            <em>Default is 8.</em>
+                        </p>
+                        <p>
+                            <input id="isPotatoes" type="radio" value="potatoes" name="potatoOptions" checked="checked" />
+                            <label for="isPotatoes">Potatoes</label><br />
+                            <input id="isTomatoes" type="radio" value="tomatoes" name="potatoOptions" />
+                            <label for="isTomatoes">Tomatoes</label><br />
+                            <input id="isBoozy" type="radio" value="boozy" name="potatoOptions" />
+                            <label for="isBoozy">Boozy!</label>
+                        </p>
+                        <button onclick="runPotatoes()">Get Lyrics!</button>
+                    </div>   
+                </div>
+                <hr />
+                <div>
+                    <fieldset>
+                        <legend>Web Service</legend>
+                        <select id="endpoint" onchange="updateEndpoint()">
+                            <option value="localDefault" selected="selected">Local</option>
+                            <option value="production">Production</option>
+                        </select>
+                        <p>
+                            <label for="endpointUrl">URL:</label><br />
+                            <input id="endpointUrl" type="text" placeholder="URL" />
+                        </p>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="output">
+                <h2>Output</h2>
+                <pre id="outputContent"></pre>
+                <div id="outputError"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="constants.js"></script>
+        <script type="text/javascript" src="client.js"></script>
+    </body>
+</html>

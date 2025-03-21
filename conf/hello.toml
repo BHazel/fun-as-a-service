@@ -1,0 +1,9 @@
+[[trigger.http]]
+id = "trigger-hello"
+component = "hello"
+route = "hello/..."
+executor = { type = "wagi" }
+
+[component.hello]
+source = "hello.wasm"
+

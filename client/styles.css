@@ -1,0 +1,46 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+h3 {
+    color: green;
+}
+
+h4 {
+    color: purple;
+}
+
+.warning {
+    background-color: yellow;
+}
+
+.container {
+    display: flex;
+}
+
+.controls {
+    flex: 0 0 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: lightyellow;
+}
+
+.output {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: lightgreen;
+}
+
+.output #outputError {
+    color: red;
+    visibility: hidden;
+}

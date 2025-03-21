@@ -1,0 +1,9 @@
+[[trigger.http]]
+id = "trigger-btl"
+component = "btl"
+route = "btl/..."
+executor = { type = "wagi" }
+
+[component.btl]
+source = "btl.wasm"
+

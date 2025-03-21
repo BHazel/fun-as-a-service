@@ -1,0 +1,9 @@
+[[trigger.http]]
+id = "trigger-fz"
+component = "fz"
+route = "fz/..."
+executor = { type = "wagi" }
+
+[component.fz]
+source = "fz.wasm"
+

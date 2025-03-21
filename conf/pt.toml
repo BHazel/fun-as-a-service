@@ -1,0 +1,9 @@
+[[trigger.http]]
+id = "trigger-pt"
+component = "pt"
+route = "pt/..."
+executor = { type = "wagi" }
+
+[component.pt]
+source = "pt.wasm"
+
